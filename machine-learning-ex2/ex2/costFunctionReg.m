@@ -23,8 +23,6 @@ thetaT(1) = 0;
 J = (1 / m) * sum(-y.*log(sigmoid(X*theta)) - (1 .- y).*log(1 .- sigmoid(X*theta))) + (lambda / (m *2)) * sum(thetaT .^ 2);
 grad = (1 / m) * (X' * (sigmoid(X * theta) - y)) + (lambda / m) * thetaT;
 
-grad = (X' * (sigmoid(X * theta) - y)) * (1/m) + thetaT * (lambda / m);
-
 % =============================================================
 
 end
